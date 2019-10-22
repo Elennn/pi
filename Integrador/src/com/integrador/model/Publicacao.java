@@ -10,6 +10,7 @@ public class Publicacao {
 	private String categoria;
 	private String documento;
 	private boolean visibilidade;
+	private GrupoEstudo publicacaoGrupoE;
 	private Date data;
 	
 	
@@ -30,7 +31,7 @@ public class Publicacao {
 
 	public Publicacao(long idPublicacao, String legenda, String comentario, String categoria, String documento,
 			boolean visibilidade,
-			ArrayList<PastaPublicacao> publicacaoPertencePasta, Date data) {
+			ArrayList<PastaPublicacao> publicacaoPertencePasta, Date data, GrupoEstudo publicacaoGrupoE) {
 		super();
 		this.idPublicacao = idPublicacao;
 		this.legenda = legenda;
@@ -41,6 +42,7 @@ public class Publicacao {
 		
 		this.publicacaoPertencePasta = publicacaoPertencePasta;
 		this.data = data;
+		this.publicacaoGrupo = publicacaoGrupoE;
 	}
 
 
@@ -62,6 +64,12 @@ public class Publicacao {
 
 
 
+	public GrupoEstudo getPublicacaoGrupoE(){
+		return publicacaoGrupoE;
+	}
+	public void setPublicacaoGrupoE(GrupoEstudo publicacaoGrupoE){
+		this.publicacaoGrupoE = publicacaoGrupoE;
+	}
 
 
 
